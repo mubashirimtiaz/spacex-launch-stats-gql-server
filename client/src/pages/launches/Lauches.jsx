@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useQuery, gql } from "@apollo/client";
 import LaunchesList from "../../components/launches_list/LaunchesList.component";
 import MissionKey from "../../components/mission_key/MissionKey.component";
@@ -15,6 +15,9 @@ const GET_LAUNCHES = gql`
 `;
 
 const Launches = () => {
+  useEffect(() => {
+    document.title = "SpaceX Launches";
+  }, []);
   const { loading, error, data } = useQuery(GET_LAUNCHES);
   if (loading)
     return (

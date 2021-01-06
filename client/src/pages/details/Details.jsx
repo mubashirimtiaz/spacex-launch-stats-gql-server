@@ -5,6 +5,7 @@ const Details = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = "SpaceX Launches | Details";
     location.pathname === "/launch" && navigate("/", { replace: true });
   });
   return <Outlet />;

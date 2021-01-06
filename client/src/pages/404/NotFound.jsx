@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = "SpaceX Launches | 404";
+  }, []);
+
   return (
     <div className="container my-5 py-5">
       <div className="row my-5 py-5">
